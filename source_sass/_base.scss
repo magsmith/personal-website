@@ -1,7 +1,92 @@
-// Add any custom Sass & CSS here
+@import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
+@import url(https://fonts.googleapis.com/css?family=Raleway:300);
+@import url(https://fonts.googleapis.com/css?family=Poiret+One);
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
+@import url(https://fonts.googleapis.com/css?family=Aclonica);
+@import url(https://fonts.googleapis.com/css?family=Quicksand);
 
 body{
 	@include breakpoint(medium down){
 		background: red !important;
 	}
+	font-family: $font-primary;
+	line-height: 130%;
+}
+
+header{
+	width: 100vw;
+	height: 100vh;
+	margin-top: 0px;
+	padding-top: 0px;
+	background: url('../data/pics/chicago.jpg') no-repeat center center fixed;
+	background-size: cover;
+
+	h1 {
+		@include vertically-center();
+		font-size: 6em;
+		color: rgba(255,255,255,0.85);
+		//line-height: 100vh;	//vertically center
+		text-align: center;
+	}
+}
+
+nav.title-bar{
+	text-align:center;
+}
+
+.title-bar {
+	max-width: 100%;
+	padding: 0px;
+    background: $transparent;
+    margin: auto;
+	line-height: $nav-height;
+    z-index: 999;
+	@include transition(0.4s);
+	font-family: $font-nav;
+	font-variant: small-caps;
+	font-size: 1.3em;
+
+	a, a:visited {
+		display: inline-block;
+		color: $black;
+		text-decoration: none;
+		font-weight: normal;
+	}
+	a:hover{
+		@include transition(0.2s);
+		color: $lightgray;
+	}
+
+	a:active{
+		border-bottom: 1px solid $white;
+	}
+
+	ul {
+		list-style-type: none;
+		text-align: center;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			min-width: 70px;
+		}
+	}
+}
+.navsmaller{	//add this class to shrink navbar
+	line-height: $nav-height-smaller;
+	@include transition(0.4s);
+	font-size: 1.2em;
+	background-color: rgba(0,0,0,0.7);
+	a, a:visited {
+		color: $white;
+	}
+	a:hover{
+		color: $lightgray;
+	}
+}
+
+h1, h2, h3 {
+	font-family: $font-header;
 }

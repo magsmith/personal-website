@@ -1,1 +1,37 @@
-// Insert your variables
+$black			: #000000;
+$white			: #FFFFFF;
+$darkgray		: #666666;
+$lightgray		: #EEEEEE;
+$transparent	: rgba(0,0,0,0);
+
+/* pattern URL: http://paletton.com/#uid=72S0Z0kiCFn8GVde7NVmtwSqXtg */
+$color-primary-0: #5AD76F;	// green  */
+$color-primary-1: #B2F4BD;	// DDFCE2 = (lighter)
+$color-primary-2: #81E793;
+$color-primary-3: #3BC553;
+$color-primary-4: #1CB236;	//darkest
+
+$color-secondary-1-0: #6179C7;	// blue */
+$color-secondary-1-1: #B6C4F0;
+$color-secondary-1-2: #879BDD;
+$color-secondary-1-3: #425CAF;
+$color-secondary-1-4: #28449E;	//darkest
+
+$color-secondary-2-0: #FFD16B;	// yellow */
+$color-secondary-2-1: #FFEABA;
+$color-secondary-2-2: #FFDC8F;
+$color-secondary-2-3: #FFC74C;
+$color-secondary-2-4: #E9AC25;	//darkest
+
+$color-complement-0: #FF756B;	// red */
+$color-complement-1: #FFBFBA;
+$color-complement-2: #FF978F;
+$color-complement-3: #E14F44;	
+$color-complement-4: #E93325;	//darkest
+
+$nav-height			: 70px;
+$nav-height-smaller	: 45px;
+
+$font-primary:'Open Sans', sans-serif;
+$font-nav: 'Open Sans', sans-serif;
+$font-header: 'Quicksand', cursive;
