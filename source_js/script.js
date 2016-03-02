@@ -1,9 +1,5 @@
 $(document).ready(function(){
 
-	$(".contactinfo").click(function () {  
-  		$(this).css('visibility', 'visible'); 
-	});
-
   	$('.center').slick({	//slick carousel
 	  	centerMode: false,
 	  	centerPadding: '5%',
@@ -40,8 +36,7 @@ $(document).ready(function(){
 		  ]
 	});
 
-
-	$('#next-slick').click(function(){
+	$('#next-slick').click(function(){		//use my own arrows for slick carousel
     	$('.center').slick('slickNext');
 	});
 	$('#prev-slick').click(function(){
@@ -50,13 +45,13 @@ $(document).ready(function(){
 
  });
 
-$('a[href*=#]:not([href=#])').click(function() {
+$('a[href*=#]:not([href=#])').click(function() {		//smooth scroll
     if ( location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname ) {
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
            if (target.length) {
              $('html,body').animate({
-                 scrollTop: target.offset().top - $('.title-bar').height()
+                 scrollTop: target.offset().top - $('.title-bar.navsmaller').height()
             }, 700);
             return false;
         }
@@ -69,7 +64,7 @@ $(window).scroll(function() {
 
 	var $titlebar = $('.title-bar');
     var windscroll = $(window).scrollTop(); // shrink navbar after scrolling down
-    if (windscroll >= $( window ).height() ) {
+    if (windscroll+5 >= $( window ).height() ) {
       $titlebar.addClass('navsmaller');
     }
     else{

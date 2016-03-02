@@ -3,12 +3,11 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
 @import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic);
 
-html, body {
-	padding: 0;
-	margin: 0;
-}
 
 body{
+	left:0;
+	right:0;
+	bottom: 0;
 	@include breakpoint(small down){
 		.navsmaller{ font-size: 1.1rem; }
 		.navsmaller{ font-size: 0.9rem; }
@@ -28,31 +27,40 @@ main {
 	background: $white;
 	line-height: 180%;
 	border-top: 1px solid $black;
-	border-bottom: 1px solid $black;
+	//border-bottom: 1px solid $black;
+	//margin-bottom: -5px;
 }
 
 footer {
+	z-index: 999;
 	text-align: center;
 	color: $white;
-	line-height: 100%;
-	background: $rosybrown;	
+	background: $tan;
+	line-height: 130%;	
 	width: 100vw;
+	padding-top: 7px;
+	//padding-bottom: 10px;
+	border-bottom: 1px solid $black;
+	border-top: 1px solid $black;
+	position: relative;
+
 
 	//for icons
 	ul {
 		list-style-type: none;
 		li {
 			display: inline-block;
-			min-width: 50px;
+			min-width: 40px;
 		}
 
 		i {	
 			color: $black;
 			&:hover {
-				color: $white;
+				color: $linen;
 				@include transition(0.1s);
 				cursor: pointer; cursor: hand;
 			}
+			vertical-align:bottom;
 		}
 	}
 }
@@ -133,7 +141,7 @@ header{
 }
 #link1, #link2, #link3, #link4 {
 	&.current{
-		border-bottom: 1px solid $white;
+		border-bottom: 2px solid $white;
 	}
 }
 
@@ -162,7 +170,7 @@ h1, h2, h3 {
 	opacity: 1.0;
 	&:hover {
 		@include transition(0.2s);
-		opacity: 1.0;
+		opacity: 0.9;
 		cursor: pointer; cursor: hand;
 	}
 }
