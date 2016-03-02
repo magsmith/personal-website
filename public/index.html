@@ -7,41 +7,108 @@
 
   <!-- Stylesheets -->
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" type="text/css" href="./lib/slick-carousel/slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="./lib/slick-carousel/slick/slick-theme.css"/>
 </head>
 
 <nav data-sticky-container>
   <div class="title-bar" data-sticky data-options="marginTop:0; stickyOn:small;" style="width:100%;">
       <ul class="dropdown menu" data-dropdown-menu>
-        <li><a href="#home">home</a></li>
-        <li><a href="#about">about</a></li>
-        <li><a href="#experience">experience</a></li>
-        <li><a href="#travel">travel</a></li>
-        <li><a href="#contact">contact</a></li>
+        <li><a href="#about" id="link1">about</a></li>
+        <li><a href="#experience" id="link1">resume</a></li>
+        <li><a href="#travel" id="link2">travel</a></li>
+        <li><a href="#contact" id="link1">contact</a></li>
       </ul>
   </div>
+
 </nav>
 
+
+
 <body>
-    <header>
+
+  <header>
 		<h1>Maggie Smith</h1>
-    </header>
+  </header>
 
-	<section class="row">
-		<div class="alert columns small-12 large-6">
-			<div class="text-center"><img src="http://lorempixel.com/400/200/cats"/></div>
-      <h2>About Me</h2>
-			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit velit temporibus, fugit recusandae aliquid officiis molestias possimus reprehenderit quos. Facere dolores, nulla optio recusandae. Voluptatibus aut esse nulla saepe sit ut amet, neque officia officiis quam ea ex adipisci, quaerat, eligendi veniam iste temporibus. Aperiam ea quos fugiat provident, voluptatum reiciendis mollitia voluptates, odio quam at, deserunt animi voluptas odit aliquid saepe voluptate distinctio excepturi. Deserunt, id esse fuga cum accusantium eos obcaecati odit veritatis molestias illum sequi repellat, quisquam quasi architecto velit blanditiis perferendis, nulla eligendi non laboriosam. Eligendi sint, voluptatem ipsam dolore eum temporibus dicta, quaerat ea molestias placeat, asperiores minima sit explicabo! Repellat qui ducimus ipsum. Dignissimos at, aliquid vitae asperiores omnis provident voluptatibus, itaque delectus. Porro corrupti vel culpa, delectus in doloremque nam ratione aliquid ullam non iusto magnam, repudiandae, magni a quasi voluptatum inventore exercitationem quibusdam sint autem totam ex quia possimus. Similique ad fugiat eligendi magnam ab, ex nulla unde eos, tempora quis consequatur maxime inventore perferendis voluptatem non nam dignissimos voluptatum dolor quasi quidem molestias maiores doloribus. Omnis ipsa fugit amet! Eum repellat deleniti fuga omnis in maiores rem iusto, qui quasi ipsum illum odit laudantium molestiae, nostrum ipsam fugit animi atque! Non.
-      </p>
+<a name="about" id="sectiontop"></a> <a name="experience"></a> <a name="contact"></a>
+<main>
+	<section class="row full-width topsection">
 
-    </div>
-		<div class="columns small-12 large-6">
-      <h2>Experience</h2>
-	  	<div class="text-center"><img src="http://lorempixel.com/400/200/nature"/></div>
-	  	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt nobis facere sint placeat necessitatibus reprehenderit amet quas minima beatae illo nemo labore, maxime adipisci, accusamus voluptates repudiandae quia, ut excepturi ea quis obcaecati molestias error architecto unde? Hic vel facere porro magnam ipsam omnis eos ducimus, architecto velit beatae modi natus sunt suscipit quo optio qui repellat, blanditiis consequuntur. Fuga omnis porro quis inventore in voluptatum veritatis illum beatae rem. Labore nam saepe cupiditate quod, itaque quidem libero, quas tempore incidunt, quos earum repudiandae recusandae quia voluptas ducimus inventore, expedita. Alias minima, commodi aut, aspernatur laborum quae mollitia pariatur suscipit ad accusamus a ipsam fuga necessitatibus voluptas esse error reprehenderit provident. Sequi architecto ipsum qui enim labore sunt incidunt ullam pariatur. Minus porro error ipsa perferendis exercitationem debitis dicta asperiores nostrum cum voluptas qui dolores odit numquam incidunt cumque eos nemo architecto repudiandae adipisci, eius ut, aut suscipit minima perspiciatis consectetur. Ratione quisquam neque voluptatem? Qui, aspernatur iste quaerat iure. Debitis nobis minus animi mollitia libero temporibus perferendis ratione, inventore ullam, eos ut porro, velit quibusdam rerum possimus, ex! Quidem consectetur obcaecati ad veritatis. Velit illum aliquid tenetur, nisi illo quaerat labore nemo id sequi eveniet consequuntur. Voluptate, similique, rem!
-      </p>
+  <div class="table">
+    <ul>
+  		  <a data-open="aboutme"><h3><li>About&nbsp;Me</li></h3></a>
+        <a data-open="exp"><h3><li>Resume</li></h3></a>
+        <a data-open="contactme"><h3><li>Contact&nbsp;Me</li></h3></a>
 
-    </div>
+    </ul>
+  </div>
+
+      <div class="reveal" id="aboutme" data-reveal>
+          <h2>About Me</h2>
+          <p>
+            My name is Maggie Smith, and I'm a junior at the University of Illinois at Urbana-Champaign. I'm studying Computer Science with a minor in Spanish. My main interests in CS are web design and front-end web development. In my free time I enjoy running, thrift-shopping, and dog-petting. I grew up in the Chicago area, but I love traveling and spent a semester in Madrid last year. I visited a lot of amazing places; keep scrolling for some highlights!
+          </p>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="reveal" id="exp" data-reveal>
+          <img src="./data/pics/resume.jpg"/>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+        <div class="reveal" id="contactme" data-reveal>
+          <h2>Contact Me</h2>
+                <div class="text-center">
+            <div class="columns small-12 medium-6">
+              <i class="fa fa-envelope-o fa-3x"></i><br>
+              mosmith2@illinois.edu
+            </div>
+            <div class="columns small-12 medium-6">
+              <i class="fa fa-mobile fa-3x"></i><br>
+              (630) 512-1368
+            </div>
+          </div>
+          <button class="close-button" data-close aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+
+
+ 
   </section>
+
+
+  <a name="travel" id="sectiontravel"></a>
+  <section class="row full-width">
+      <div class="text-center">
+      <h2><span id="prev-slick"> ← </span> Travel <span id="next-slick"> → </span></h2>
+        <div class="center">
+          <div><img src="./data/pics/berlinwall.jpg"/></div>
+          <div><img src="./data/pics/athens.jpg"/></div>
+          <div><img src="./data/pics/hagia.jpg"/></div>
+          <div><img src="./data/pics/riomag.jpg"/></div>
+          <div><img src="./data/pics/sevilla.jpg"/></div>
+          <div><img src="./data/pics/eiffel.jpg"/></div>
+        </div>
+    </div>
+
+  </section>
+
+
+</main>
+
+  <footer>
+       <ul>
+        <li><a href="https://www.facebook.com/maggie.smith.5680"><i class="fa fa-facebook fa-2x"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/mosmith2"><i class="fa fa-linkedin fa-2x"></i></a></li>
+        <li><a href="https://github.com/mosmith2"><i class="fa fa-github fa-2x"></i></a><li>
+      </ul>
+  </footer>
 
   <!-- Scripts -->
   
@@ -52,5 +119,7 @@
     $(document).foundation();
   </script>
   <script src="http://localhost:35729/livereload.js"></script>
+  <script type="text/javascript" src="./lib/slick-carousel/slick/slick.min.js"></script>
+          
 </body>
 </html>

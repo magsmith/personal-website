@@ -1,18 +1,60 @@
 @import url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
-@import url(https://fonts.googleapis.com/css?family=Raleway:300);
-@import url(https://fonts.googleapis.com/css?family=Poiret+One);
-@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-@import url(https://fonts.googleapis.com/css?family=Droid+Serif);
-@import url(https://fonts.googleapis.com/css?family=Aclonica);
 @import url(https://fonts.googleapis.com/css?family=Quicksand);
+@import url(https://fonts.googleapis.com/css?family=Playfair+Display:400italic);
+
+html, body {
+	padding: 0;
+	margin: 0;
+}
 
 body{
-	@include breakpoint(medium down){
-		background: red !important;
+	@include breakpoint(small down){
+		.navsmaller{ font-size: 1.1rem; }
+		.navsmaller{ font-size: 0.9rem; }
+		.topsection{ ul li { width: 40%; margin-bottom: 2.5%; } }
 	}
+
 	font-family: $font-primary;
-	line-height: 130%;
+	background: url('../data/pics/chicago.jpg') no-repeat center center fixed;
+	background-size: cover;
+	background-color: $black;
+	max-height: 100%;
+
+}
+
+main {
+	width: 100vw;
+	background: $white;
+	line-height: 180%;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+}
+
+footer {
+	text-align: center;
+	color: $white;
+	line-height: 100%;
+	background: $rosybrown;	
+	width: 100vw;
+
+	//for icons
+	ul {
+		list-style-type: none;
+		li {
+			display: inline-block;
+			min-width: 50px;
+		}
+
+		i {	
+			color: $black;
+			&:hover {
+				color: $white;
+				@include transition(0.1s);
+				cursor: pointer; cursor: hand;
+			}
+		}
+	}
 }
 
 header{
@@ -24,16 +66,11 @@ header{
 	background-size: cover;
 
 	h1 {
+		font-size: 5em;
 		@include vertically-center();
-		font-size: 6em;
 		color: rgba(255,255,255,0.85);
-		//line-height: 100vh;	//vertically center
 		text-align: center;
 	}
-}
-
-nav.title-bar{
-	text-align:center;
 }
 
 .title-bar {
@@ -42,7 +79,7 @@ nav.title-bar{
     background: $transparent;
     margin: auto;
 	line-height: $nav-height;
-    z-index: 999;
+    z-index: 900;
 	@include transition(0.4s);
 	font-family: $font-nav;
 	font-variant: small-caps;
@@ -58,9 +95,98 @@ nav.title-bar{
 		@include transition(0.2s);
 		color: $lightgray;
 	}
-
 	a:active{
 		border-bottom: 1px solid $white;
+	}
+
+	ul {
+		list-style-type: none;
+		text-align: left;
+
+		li {
+			display: inline-block;
+			vertical-align: middle;
+			min-width: 70px;
+
+		}
+	}
+}
+.navsmaller{	//add this class to shrink navbar
+
+	line-height: $nav-height-smaller;
+	@include transition(0.4s);
+	font-size: 1.3em;
+	background-color: $tan;
+	border-bottom: 0px solid $black;
+	opacity: 0.9;
+
+	ul {
+		text-align: center;
+	}
+
+	a, a:visited {
+		color: $black;
+	}
+	a:hover, a:active{
+		color: $white;
+	}
+}
+#link1, #link2, #link3, #link4 {
+	&.current{
+		border-bottom: 1px solid $white;
+	}
+}
+
+h1, h2, h3 {
+	font-family: $font-title;
+	color: $black;
+	a, a:visited{
+		color: $black;
+	}
+	a:hover{
+		color: $rosybrown;
+	}
+}
+
+.row {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	&.full-width{
+	    max-width: 100% !important;
+    }
+}
+
+.center img {		//slick carousel
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	opacity: 1.0;
+	&:hover {
+		@include transition(0.2s);
+		opacity: 1.0;
+		cursor: pointer; cursor: hand;
+	}
+}
+
+#prev-slick, #next-slick{
+	&:hover{
+		@include transition(0.2s);
+		cursor: pointer; cursor: hand;
+		color: $rosybrown;
+	}
+}
+
+#prev-slick{ padding-right: 20px; }
+#next-slick{ padding-left: 20px; }
+
+
+.topsection{
+
+	background-color: $linen;
+	border-bottom: 1px solid $black;
+
+	h3 {
+		display:inline;
+		line-height: 400%;
 	}
 
 	ul {
@@ -68,25 +194,58 @@ nav.title-bar{
 		text-align: center;
 
 		li {
+			background-color: $white;
+			width: 30%;
+			max-width: 300px;
+			margin: 0 0.7%;
+			line-height: 500%;
 			display: inline-block;
-			vertical-align: middle;
-			min-width: 70px;
+			border: 1px solid $black;
 		}
 	}
-}
-.navsmaller{	//add this class to shrink navbar
-	line-height: $nav-height-smaller;
-	@include transition(0.4s);
-	font-size: 1.2em;
-	background-color: rgba(0,0,0,0.7);
-	a, a:visited {
-		color: $white;
+
+	a li:hover{
+		background: $rosybrown;
+		cursor: pointer; cursor: hand;
 	}
-	a:hover{
-		color: $lightgray;
+
+}
+
+.contactinfo {
+	visibility: hidden;
+
+	i {
+		visibility: visible;
+		color: $black;
+		//opacity: 0.8;
+
+		&:hover{
+			opacity: 0.5;
+			@include transition(0.1s);
+			cursor: pointer; cursor: hand;
+		}		
 	}
 }
 
-h1, h2, h3 {
-	font-family: $font-header;
+a:active, a:selected, a:visited { 
+    border: none;
+    outline: none;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+
+.progress-indicator {
+	z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background-color: #0A74DA;
 }
