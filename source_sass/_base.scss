@@ -164,10 +164,27 @@ h1, h2, h3 {
     }
 }
 
+
 .center img {		//slick carousel
+	z-index: 500;
+	max-height: 500px;
 	border-top: 1px solid $black;
 	border-bottom: 1px solid $black;
 	opacity: 1.0;
+	&:hover {
+		@include transition(0.2s);
+		opacity: 0.9;
+		cursor: pointer; cursor: hand;
+	}
+}
+
+.center video {		//slick carousel
+	z-index: 400;
+	border-top: 1px solid $black;
+	border-bottom: 1px solid $black;
+	opacity: 1.0;
+	object-fit: cover;
+	max-height: 500px;
 	&:hover {
 		@include transition(0.2s);
 		opacity: 0.9;

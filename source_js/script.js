@@ -1,13 +1,14 @@
 $(document).ready(function(){
 
   	$('.center').slick({	//slick carousel
-	  	centerMode: false,
+	  	centerMode: true,
 	  	centerPadding: '5%',
 		infinite: true,
 		slidesToShow: 3,
 		slidesToScroll: 1,
 		focusOnSelect: true,
 		arrows: false,
+		variableWidth: true,
 
 		responsive: [
 			{
@@ -96,7 +97,5 @@ $(window).scroll(function() {
       console.log("contact");
     }
  //// end position indicator
-
-
 
 }).scroll();
