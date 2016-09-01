@@ -1,5 +1,5 @@
 # Repository for personal website
-Adapted from MP2 of CS498RK: The Art and Science of Web Programming
+Adapted from MP2 of CS498RK: The Art and Science of Web Programming.
 
 ## Setup
 `cd` to repository:
