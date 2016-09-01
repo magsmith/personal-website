@@ -1,9 +1,9 @@
 {
-  "name": "mp2_starter",
+  "name": "maggie-smith-personal-website",
   "version": "1.0.0",
-  "homepage": "https://github.com/uiuc-web-programming/mp1_starter",
+  "homepage": "https://github.com/mosmith2/personal-website",
   "authors": [
-    "biplabdeka <biplab.deka@gmail.com>"
+    "maggie smith <mosmith2@illinois.edu>"
   ],
   "dependencies": {
     "express": "^4.11.1",
