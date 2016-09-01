@@ -178,20 +178,6 @@ h1, h2, h3 {
 	}
 }
 
-.center video {		//slick carousel
-	z-index: 400;
-	border-top: 1px solid $black;
-	border-bottom: 1px solid $black;
-	opacity: 1.0;
-	object-fit: cover;
-	max-height: 500px;
-	&:hover {
-		@include transition(0.2s);
-		opacity: 0.9;
-		cursor: pointer; cursor: hand;
-	}
-}
-
 #prev-slick, #next-slick{
 	&:hover{
 		@include transition(0.2s);
@@ -265,6 +251,14 @@ a:active, a:selected, a:visited {
     visibility: hidden;
 }
 
+#aboutme{
+	@include breakpoint(small down){
+		.reveal{ width: 95%; }
+	}
+	@include breakpoint(medium){
+		.reveal{ width: 90%; }
+	}
+}
 
 .progress-indicator {
 	z-index: 999;
