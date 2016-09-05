@@ -1,9 +1,9 @@
 {
-  "name": "mp2_starter",
+  "name": "personal-website",
   "version": "2.0",
-  "homepage": "https://github.com/uiuc-web-programming/mp2_starter",
+  "homepage": "https://github.com/mosmith2/personal-website",
   "authors": [
-    "biplabdeka <biplab.deka@gmail.com>"
+    "mosmith2 <mosmith2@illinois.edu>"
   ],
   "ignore": [
     "**/.*",
